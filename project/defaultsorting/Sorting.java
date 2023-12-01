@@ -1,10 +1,12 @@
 package project.defaultsorting;
 
+import project.display.CompareSortingDisplay;
 import project.display.SortingDisplay;
 
 public abstract class Sorting {
     public int[] values;
     public SortingDisplay sortingDisplay;
+    public CompareSortingDisplay compareSortingDisplay;
     public int accessCount; //đếm số lần lặp
     public int comparisons; //đếm số lần so sánh
     public int swapCount; //đếm số lần đổi chỗ

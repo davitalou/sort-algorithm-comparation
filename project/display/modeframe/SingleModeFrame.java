@@ -68,9 +68,10 @@ public class SingleModeFrame extends JFrame implements ModeInterface {
         topPanel.add(comboBox);
         // Add the top panel to the frame at the top (north)
         add(topPanel, BorderLayout.NORTH);
-
+       // sorting = new BubbleSort(App.generateRandomArray(50));
+        //sorting.sortingDisplay.repaint();
         // Add the test panel to the center of the frame
-        this.sorting = new BubbleSort(App.generateRandomArray(50));
+        //this.sorting = new BubbleSort(App.generateRandomArray(50));
         //add(this.sorting.getSortingDisplay(), BorderLayout.CENTER);
         setSize(800, 600);
 
@@ -108,14 +109,17 @@ public class SingleModeFrame extends JFrame implements ModeInterface {
         System.out.println("Change to selection " + selection);
         int[] x = App.generateRandomArray(50);
         if (selection.equals("1111111")) {
-            if (sorting.getSortingDisplay() != null) remove(sorting.getSortingDisplay());
-            sorting = new BubbleSort(x);
-            add(sorting.getSortingDisplay());
-            //this.sorting.getSortingDisplay().repaint();
+            if(sorting != null) {
+                remove(sorting.getSortingDisplay());
+            }
+                sorting = new BubbleSort(x);
+                add(sorting.getSortingDisplay());
         } else if (selection.equals("2222222")) {
-            if (sorting.getSortingDisplay() != null) remove(sorting.getSortingDisplay());
-            sorting = new InsertionSort(x);
-            add(sorting.getSortingDisplay());
+            if(sorting != null) {
+                remove(sorting.getSortingDisplay());
+            }
+                sorting = new InsertionSort(x);
+                add(sorting.getSortingDisplay());
             //this.sorting.getSortingDisplay().repaint();
         }
     }

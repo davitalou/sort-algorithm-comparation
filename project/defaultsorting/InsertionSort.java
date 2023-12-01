@@ -1,5 +1,6 @@
 package project.defaultsorting;
 
+import project.display.CompareSortingDisplay;
 import project.display.SortingDisplay;
 
 public class InsertionSort extends Sorting {
@@ -20,7 +21,7 @@ public class InsertionSort extends Sorting {
             while (j >= 0 && values[j] > key) {
                 values[j + 1] = values[j];
                 j = j - 1;
-                //this.sortingDisplay.repaint();
+                this.sortingDisplay.repaint();
                 this.sortingDisplay.sleep();
             }
             values[j + 1] = key;

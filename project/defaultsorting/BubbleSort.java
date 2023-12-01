@@ -1,5 +1,6 @@
 package project.defaultsorting;
 
+import project.display.CompareSortingDisplay;
 import project.display.SortingDisplay;
 
 public class BubbleSort extends Sorting {
